@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather | Home</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+  <link rel="icon" href="/img/icon.png">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  <header>
+    <div>{{>header}}</div>
+  </header>
+  <div id="mainOuterDiv">
+    <div class="main">
+      <div class="inputDiv">
+        <h3>Enter location:</h3>
+        <form action="" id="weatherForm">
+          <input type="text" id="searchedLocation">
+          <button>Search</button>
+        </form>
+      </div>
+      <div class="dataStatus">
+        <h2 id="dataStatusMsg"></h2>
+      </div>
+      <div id="displayUserData">
+        {{!-- for location  --}}
+        <div id="cLocation">
+          <h2>Weather: <span id="cName"></span>,<span id="cRegion"></span>,<span id="cCountry"></span></h2>
+        </div>
+        {{!-- current weather div start  --}}
+        <div>
+          <h2>Current(<span id="cDate"></span>) weather:</h2>
+          <div class="smallDiv">
+            <h3>Temp:(&deg;c)</h3>
+            <h4 id="cTemp"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Condition:</h3>
+
+            <h4><span id="cCondition"></span><img src="" alt="icon" id="cConditionImg">
+            </h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Wind Speed(Kmp):</h3>
+            <h4 id="cWindSpeed"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Wind direction:</h3>
+            <h4 id="cWindDirection"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Humidity(&percnt;):</h3>
+            <h4 id="cHumidity"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Cloud(&percnt;):</h3>
+            <h4 id="cCloud"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Real Feel(&deg;c):</h3>
+            <h4 id="cRealFeel"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Air Quality <br>(UK Defra Index):</h3>
+            <h4 id="cAirIndex"></h4>
+
+          </div>
+        </div>
+        {{!-- current weather div end  --}}
+        {{!-- Tommrow day start  --}}
+        <div style="clear: both;"></div>
+        <div>
+          <h2>Date:<span id="tDate"></span>: </h2>
+
+          <div class="smallDiv">
+            <h3>Condition:</h3>
+            <h4 id="tCondition"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Max Temp(&deg;c):</h3>
+            <h4 id="tMaxTemp">
+            </h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Min Temp(&deg;c):</h3>
+            <h4 id="tMinTemp"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Avg Temp(&deg;c):</h3>
+            <h4 id="tAvgTemp"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Max Wind <br> Speed(Kmp):</h3>
+            <h4 id="tMaxWindSpeed"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Chance of <br> rain(&percnt;):</h3>
+            <h4 id="tRainChance"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Sunrise:</h3>
+            <h4 id="tSunRise"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Sunset:</h3>
+            <h4 id="tSunSet"></h4>
+
+          </div>
+        </div>
+        {{!-- tommrow end  --}}
+        {{!-- Tommrow day Graphical representation start --}}
+        <div style="clear: both;"></div>
+        <div>
+          <h2><span id="tDate2"></span>(hourly):</h2>
+          <div class="graphicalDiv">
+            <h4>Time: <i>0:00</i> </h4> <img src="" alt="forecast" id="hour1Img">
+            <h4 id="hour1Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>5:00</i></h4> <img src="" alt="forecast" id="hour5Img">
+            <h4 id="hour5Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>9:00</i></h4> <img src="" alt="forecast" id="hour9Img">
+            <h4 id="hour9Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>13:00</i></h4> <img src="" alt="forecast" id="hour13Img">
+            <h4 id="hour13Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>17:00</i></h4> <img src="" alt="forecast" id="hour17Img">
+            <h4 id="hour17Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>20:00</i></h4> <img src="" alt="forecast" id="hour20Img">
+            <h4 id="hour20Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>23:00</i></h4> <img src="" alt="forecast" id="hour23Img">
+            <h4 id="hour23Condition"></h4>
+          </div>
+        </div>
+        {{!-- Tommrow day Graphical representation end--}}
+        {{!-- 2ND day start  --}}
+        <div style="clear: both;"></div>
+        <div>
+          <h2>Date:<span id="sDate"></span>: </h2>
+          <div class="smallDiv">
+            <h3>Condition:</h3>
+            <h4 id="sCondition"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Max Temp(&deg;c):</h3>
+            <h4 id="sMaxTemp">
+            </h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Min Temp(&deg;c):</h3>
+            <h4 id="sMinTemp"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Avg Temp(&deg;c):</h3>
+            <h4 id="sAvgTemp"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Max Wind <br> Speed(Kmp):</h3>
+            <h4 id="sMaxWindSpeed"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Chance of <br> rain(&percnt;):</h3>
+            <h4 id="sRainChance"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Sunrise:</h3>
+            <h4 id="sSunRise"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Sunset:</h3>
+            <h4 id="sSunSet"></h4>
+
+          </div>
+        </div>
+        {{!-- 2ND day end  --}}
+        {{!-- 2ND day Graphical representation start --}}
+        <div style="clear: both;"></div>
+        <div>
+          <h2><span id="sDate2"></span>(hourly):</h2>
+          <div class="graphicalDiv">
+            <h4>Time: <i>0:00</i> </h4> <img src="" alt="forecast" id="shour1Img">
+            <h4 id="shour1Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>5:00</i></h4> <img src="" alt="forecast" id="shour5Img">
+            <h4 id="shour5Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>9:00</i></h4> <img src="" alt="forecast" id="shour9Img">
+            <h4 id="shour9Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>13:00</i></h4> <img src="" alt="forecast" id="shour13Img">
+            <h4 id="shour13Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>17:00</i></h4> <img src="" alt="forecast" id="shour17Img">
+            <h4 id="shour17Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>20:00</i></h4> <img src="" alt="forecast" id="shour20Img">
+            <h4 id="shour20Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>23:00</i></h4> <img src="" alt="forecast" id="shour23Img">
+            <h4 id="shour23Condition"></h4>
+          </div>
+        </div>
+
+        {{!-- 2ND day Graphical representation end--}}
+        {{!-- 3RD day start  --}}
+        <div style="clear: both;"></div>
+        <div>
+          <h2>Date:<span id="thDate"></span>: </h2>
+          <div class="smallDiv">
+            <h3>Condition:</h3>
+            <h4 id="thCondition"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Max Temp(&deg;c):</h3>
+            <h4 id="thMaxTemp">
+            </h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Min Temp(&deg;c):</h3>
+            <h4 id="thMinTemp"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Avg Temp(&deg;c):</h3>
+            <h4 id="thAvgTemp"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Max Wind <br> Speed(Kmp):</h3>
+            <h4 id="thMaxWindSpeed"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Chance of <br> rain(&percnt;):</h3>
+            <h4 id="thRainChance"></h4>
+          </div>
+          <div class="smallDiv">
+            <h3>Sunrise:</h3>
+            <h4 id="thSunRise"></h4>
+
+          </div>
+          <div class="smallDiv">
+            <h3>Sunset:</h3>
+            <h4 id="thSunSet"></h4>
+
+          </div>
+        </div>
+        {{!-- 3RD day end  --}}
+        {{!-- 3RD day Graphical representation start --}}
+        <div style="clear: both;"></div>
+        <div>
+          <h2><span id="thDate2"></span>(hourly):</h2>
+          <div class="graphicalDiv">
+            <h4>Time: <i>0:00</i> </h4> <img src="" alt="forecast" id="thhour1Img">
+            <h4 id="thhour1Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>5:00</i></h4> <img src="" alt="forecast" id="thhour5Img">
+            <h4 id="thhour5Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>9:00</i></h4> <img src="" alt="forecast" id="thhour9Img">
+            <h4 id="thhour9Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>13:00</i></h4> <img src="" alt="forecast" id="thhour13Img">
+            <h4 id="thhour13Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>17:00</i></h4> <img src="" alt="forecast" id="thhour17Img">
+            <h4 id="thhour17Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>20:00</i></h4> <img src="" alt="forecast" id="thhour20Img">
+            <h4 id="thhour20Condition"></h4>
+          </div>
+          <div class="graphicalDiv">
+            <h4>Time:<i>23:00</i></h4> <img src="" alt="forecast" id="thhour23Img">
+            <h4 id="thhour23Condition"></h4>
+          </div>
+        </div>
+        {{!-- 3RD day Graphical representation end--}}
+      </div>
+    </div>
+  </div>
+  </div>
+  <div style="clear: both;"></div>
+  <footer>
+    {{>footer}}
+  </footer>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

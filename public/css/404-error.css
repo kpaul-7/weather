@@ -1,0 +1,29 @@
+/* body section  */
+.main {
+  width: 60%;
+  margin: auto;
+  min-height: 30em;
+  padding: 1em;
+}
+.main a {
+  text-decoration: none;
+  display: block;
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+/* for mobile  */
+@media only screen and (max-width: 768px) {
+  /* body section  */
+  .main {
+    width: 90%;
+    margin: auto;
+    min-height: 15em;
+    padding: 5px;
+  }
+  .main a {
+    text-decoration: none;
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1em;
+  }
+}

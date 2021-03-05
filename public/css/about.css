@@ -1,0 +1,20 @@
+/* body section style  */
+#main {
+  min-height: 32em;
+}
+#content {
+  width: 60%;
+  margin: auto;
+}
+
+/* for Mobile  */
+
+@media only screen and (max-width: 768px) {
+  #main {
+    min-height: 15em;
+  }
+  #content {
+    width: 90%;
+    margin: auto;
+  }
+}

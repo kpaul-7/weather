@@ -1,0 +1,148 @@
+/*body part design start*/
+.main {
+  width: 60%;
+  margin: auto;
+}
+/* data status div */
+.dataStatus {
+  display: block;
+}
+#displayUserData {
+  display: none;
+}
+#mainOuterDiv {
+  min-height: 32em;
+}
+/* input div section start  */
+.inputDiv h3,
+.inputDiv form {
+  display: inline-block;
+}
+.inputDiv input {
+  border: 1px grey solid;
+  font-size: 1em;
+  padding: 4px 8px;
+}
+.inputDiv button {
+  border: 1px solid grey;
+  font-size: 1em;
+  padding: 4px 8px;
+}
+/* input div section end  */
+/* display section  */
+/* current section  */
+.smallDiv {
+  float: left;
+  display: block;
+  margin: 1em;
+  min-height: 9em;
+  padding: 0.5em 1em;
+  color: #006beb;
+  background-color: #f4f9f9;
+  box-shadow: 0px 0px 10px -2px rgba(22, 135, 167, 0.65);
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(22, 135, 167, 0.65);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(22, 135, 167, 0.65);
+  border-radius: 8px;
+}
+
+/* graphical div style  */
+.graphicalDiv {
+  display: block;
+  float: left;
+  margin: 1em;
+  padding: 0.5em 1em;
+  color: #006beb;
+  background-color: #f4f9f9;
+  box-shadow: 0px 0px 10px -2px rgba(22, 135, 167, 0.65);
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(22, 135, 167, 0.65);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(22, 135, 167, 0.65);
+  border-radius: 8px;
+}
+#cLocation {
+  margin: 1em;
+  padding: 0.5em 1em;
+  box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+  -webkit-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+  -moz-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+  border-radius: 8px;
+}
+
+/* For mobile   */
+@media only screen and (max-width: 768px) {
+  /*body part design start*/
+  .main {
+    width: 95%;
+    margin: auto;
+    padding: 1em;
+  }
+  #displayUserData {
+    /* deafault value none  */
+    display: none;
+  }
+  #mainOuterDiv {
+    min-height: 15em;
+  }
+  /* input div section start  */
+  .inputDiv h3,
+  .inputDiv form {
+    display: inline-block;
+  }
+  .inputDiv input {
+    border: 1px grey solid;
+    width: 60%;
+    font-size: 1.5em;
+    padding: 4px 8px;
+  }
+  .inputDiv button {
+    border: 1px solid grey;
+    font-size: 1.5em;
+    padding: 4px 8px;
+  }
+  /* input div section end  */
+  /* display section  */
+  /* current section  */
+  .smallDiv {
+    float: left;
+    display: block;
+    max-width: 30%;
+    min-width: 30%;
+    min-height: 12em;
+    margin: auto;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 1em;
+    box-sizing: border-box;
+    padding: 4px 5px;
+    border: 1px solid red;
+    box-shadow: none;
+    word-wrap: break-word;
+    /* box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    -webkit-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    -moz-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    border-radius: 8px; */
+  }
+  /* graphical div style  */
+  .graphicalDiv {
+    display: block;
+    float: left;
+    width: 30%;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    padding: 0.5em 1em;
+    box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    -webkit-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    -moz-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    border-radius: 8px;
+  }
+  #cLocation {
+    margin: 1em 0.5em;
+
+    padding: 0.5em 1em;
+    font-size: 1em;
+    box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    -webkit-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    -moz-box-shadow: 1px 2px 13px 10px rgba(235, 235, 235, 0.75);
+    border-radius: 8px;
+  }
+}
