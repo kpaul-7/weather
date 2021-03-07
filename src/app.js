@@ -21,15 +21,20 @@ app.set("view engine", "hbs");
 //setting partials path for hbs
 const partialsPath = path.join(__dirname, "../templates/partials");
 hbs.registerPartials(partialsPath);
+//initialize viwercount
+let VIWER_COUNT = 0;
 //setting path
 app.get("", (req, res) => {
-  res.render("index");
+  VIWER_COUNT++;
+  res.render("index", { VIWER_COUNT });
 });
 app.get("/help", (req, res) => {
-  res.render("help");
+  VIWER_COUNT++;
+  res.render("help", { VIWER_COUNT });
 });
 app.get("/about", (req, res) => {
-  res.render("about");
+  VIWER_COUNT++;
+  res.render("about", { VIWER_COUNT });
 });
 //here fetch the weather data
 app.get("/weather-data", (req, res) => {
