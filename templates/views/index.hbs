@@ -37,32 +37,26 @@
         {{!-- current weather div start  --}}
         <div>
           <h2>Current(<span id="cDate"></span>) weather:</h2>
+          <div class="flexCover">
           <div class="smallDiv">
             <h3>Temp:(&deg;c)</h3>
             <h4 id="cTemp"></h4>
-
           </div>
           <div class="smallDiv">
             <h3>Condition:</h3>
-
-            <h4><span id="cCondition"></span><img src="" alt="icon" id="cConditionImg">
-            </h4>
-
+            <h4><span id="cCondition"></span><img src="" alt="icon" id="cConditionImg"></h4>
           </div>
           <div class="smallDiv">
             <h3>Wind Speed(Kmp):</h3>
             <h4 id="cWindSpeed"></h4>
-
           </div>
           <div class="smallDiv">
             <h3>Wind direction:</h3>
             <h4 id="cWindDirection"></h4>
-
           </div>
           <div class="smallDiv">
             <h3>Humidity(&percnt;):</h3>
             <h4 id="cHumidity"></h4>
-
           </div>
           <div class="smallDiv">
             <h3>Cloud(&percnt;):</h3>
@@ -71,12 +65,11 @@
           <div class="smallDiv">
             <h3>Real Feel(&deg;c):</h3>
             <h4 id="cRealFeel"></h4>
-
           </div>
           <div class="smallDiv">
             <h3>Air Quality <br>(UK Defra Index):</h3>
             <h4 id="cAirIndex"></h4>
-
+          </div>
           </div>
         </div>
         {{!-- current weather div end  --}}
@@ -85,6 +78,7 @@
         <div>
           <h2>Date:<span id="tDate"></span>: </h2>
 
+     <div class="flexCover">
           <div class="smallDiv">
             <h3>Condition:</h3>
             <h4 id="tCondition"></h4>
@@ -122,12 +116,14 @@
             <h4 id="tSunSet"></h4>
 
           </div>
+          </div>
         </div>
         {{!-- tommrow end  --}}
         {{!-- Tommrow day Graphical representation start --}}
         <div style="clear: both;"></div>
         <div>
           <h2><span id="tDate2"></span>(hourly):</h2>
+          <div class="flexCover">
           <div class="graphicalDiv">
             <h4>Time: <i>0:00</i> </h4> <img src="" alt="forecast" id="hour1Img">
             <h4 id="hour1Condition"></h4>
@@ -156,12 +152,14 @@
             <h4>Time:<i>23:00</i></h4> <img src="" alt="forecast" id="hour23Img">
             <h4 id="hour23Condition"></h4>
           </div>
+          </div>
         </div>
         {{!-- Tommrow day Graphical representation end--}}
         {{!-- 2ND day start  --}}
         <div style="clear: both;"></div>
         <div>
           <h2>Date:<span id="sDate"></span>: </h2>
+          <div class="flexCover">
           <div class="smallDiv">
             <h3>Condition:</h3>
             <h4 id="sCondition"></h4>
@@ -199,12 +197,14 @@
             <h4 id="sSunSet"></h4>
 
           </div>
+          </div>
         </div>
         {{!-- 2ND day end  --}}
         {{!-- 2ND day Graphical representation start --}}
         <div style="clear: both;"></div>
         <div>
           <h2><span id="sDate2"></span>(hourly):</h2>
+          <div class="flexCover">
           <div class="graphicalDiv">
             <h4>Time: <i>0:00</i> </h4> <img src="" alt="forecast" id="shour1Img">
             <h4 id="shour1Condition"></h4>
@@ -233,6 +233,7 @@
             <h4>Time:<i>23:00</i></h4> <img src="" alt="forecast" id="shour23Img">
             <h4 id="shour23Condition"></h4>
           </div>
+          </div>
         </div>
 
         {{!-- 2ND day Graphical representation end--}}
@@ -240,6 +241,7 @@
         <div style="clear: both;"></div>
         <div>
           <h2>Date:<span id="thDate"></span>: </h2>
+          <div class="flexCover">
           <div class="smallDiv">
             <h3>Condition:</h3>
             <h4 id="thCondition"></h4>
@@ -277,12 +279,14 @@
             <h4 id="thSunSet"></h4>
 
           </div>
+          </div>
         </div>
         {{!-- 3RD day end  --}}
         {{!-- 3RD day Graphical representation start --}}
         <div style="clear: both;"></div>
         <div>
           <h2><span id="thDate2"></span>(hourly):</h2>
+          <div class="flexCover">
           <div class="graphicalDiv">
             <h4>Time: <i>0:00</i> </h4> <img src="" alt="forecast" id="thhour1Img">
             <h4 id="thhour1Condition"></h4>
@@ -310,6 +314,7 @@
           <div class="graphicalDiv">
             <h4>Time:<i>23:00</i></h4> <img src="" alt="forecast" id="thhour23Img">
             <h4 id="thhour23Condition"></h4>
+          </div>
           </div>
         </div>
         {{!-- 3RD day Graphical representation end--}}

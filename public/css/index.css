@@ -31,8 +31,11 @@
 /* input div section end  */
 /* display section  */
 /* current section  */
+.flexCover {
+  display: flex;
+  overflow-x: scroll;
+}
 .smallDiv {
-  float: left;
   display: block;
   margin: 1em;
   min-height: 9em;
@@ -48,7 +51,7 @@
 /* graphical div style  */
 .graphicalDiv {
   display: block;
-  float: left;
+
   margin: 1em;
   padding: 0.5em 1em;
   color: #006beb;
