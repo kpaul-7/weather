@@ -1,4 +1,5 @@
 /*body part design start*/
+
 .main {
   width: 60%;
   margin: auto;
@@ -22,14 +23,27 @@
   display: inline-block;
 }
 .inputDiv input {
-  border: 1px grey solid;
+  border: none;
+  border-bottom: 1px solid #006beb;
   font-size: 1em;
+  margin: 0 1em;
   padding: 4px 8px;
 }
+.inputDiv input:hover,
+.inputDiv input:active,
+.inputDiv input:focus {
+  outline: none;
+}
 .inputDiv button {
-  border: 1px solid grey;
+  border: none;
+  background: #006beb;
+  color: #f4f9f9;
   font-size: 1em;
-  padding: 4px 8px;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+}
+.inputDiv button:hover {
+  cursor: pointer;
 }
 /* input div section end  */
 /* display section  */
@@ -135,7 +149,7 @@
     float: left;
     display: block;
     max-width: 40%;
-    min-width: 40%;
+    min-width: 60%;
     min-height: 12em;
     margin: auto;
     margin-right: 5px;
@@ -152,6 +166,7 @@
   .graphicalDiv {
     display: block;
     float: left;
+    min-width: 60%;
     max-width: 60%;
     margin-left: 1em;
     margin-right: 1em;
